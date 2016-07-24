@@ -1,0 +1,113 @@
+@startuml
+abstract class Event
+class Dungeon
+class Loot
+class Battle
+
+abstract Character{
+..Main Infos..
+#int hp
+#int maxHp
+#String nom
+..stats..
+#int str
+#int con
+#int dex
+#int wis
+#int inte
+#int cha
+..Inventory..
+#Armor[] armor
+#Weapon weapon
+==
+..Constructors..
++Character()
+
+..Stat getters..
++int getNom()
++int getHp()
++int getMaxHp()
++int getStr()
++int getCon()
++int getDex()
++int getInte()
++int getCha()
+
+..Inventory getters..
++Armor getArmorHead()
++Armor getArmorTorso()
++Armor getArmorLegs()
++Armor getArmorFeet()
++Armor getArmorHands()
++Weapon getWeapon()
+
+..Actions..
++bool attack()
++bool receiveDamage()
++void heal()
+
+..Buffs..
++void buffHp()
++void buffStr()
++void buffCon()
++void buffDex()
++void buffWis()
++void buffInte()
++void buffCon()
+
+..Debuffs..
++void debuffHp()
++void debuffStr()
++void debuffCon()
++void debuffDex()
++void debuggWis()
++void debuffInte()
++void debuffCha()
+}
+class Player{
+#int exp
+#int level
+#Skill[] skills
+#Item[] inventory
+#int maxInvSize
+==
++Player()
++int getLevel()
++int getExp()
++Skill[] getSkills()
++Item[] getInventory()
++int getMaxInvSize()
++void gainXp()
+}
+class Enemy
+class Boss
+class Spell
+
+abstract Item
+class Consumable
+class Gear
+class Armor
+class Weapon
+
+Event <|-- Loot
+Event <|-- Battle
+
+Character <|-- Player
+Character <|-- Enemy
+Enemy <|-- Boss
+
+Item <|-- Consumable
+Item <|-- Gear
+Gear <|-- Armor
+Gear <|-- Weapon
+
+
+
+Dungeon "1" *- "*" Event : Rooms
+Dungeon "1" *- "1-4" Player : Team
+Event "1" o- "1-4" Player : Players
+Battle "1" *- "1-4" Enemy : Opposition
+Character "1" *- "*" Spell : Spellbook
+Player "1" *- "*" Item : Inventory
+Loot "1" *- "*" Item : Loot table
+@enduml
