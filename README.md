@@ -17,3 +17,33 @@ Characters can also hold armor for head, chest, legs, feet and hands, as well as
 
 ## Language
 The framework is coded in PHP to ease testing, especially with interface (which I deem easier to create in HTML); however, a port to Java for use in Java and Android code is clearly envisaged once the framework's initial version works.
+
+## Functionnalities
+As for this version 1.0, the following functionnalities are to be programmed:
+### Dungeon
+* Randomly generated using a certain pool of pre-made rooms
+* Can be modified with settings
+* Turn-based actions
+* Room or number of room passed objective 
+* Possibility of stat tests and variable difficulty on actions
+
+### Characters
+* Character inventory (weight system based on **CON**)
+* Character armor (weight halved in inventory)
+* Character main weapon
+* Leveling XP Curve
+* Character classes with spells accessible at certain levels
+* Spells (with limited use)
+* Team management up to 4 players
+* Health and Magic meters
+* Main RPG stats
+
+### Monsters
+* Much like characters but with no inventory other than worn items
+* Possibility of boss monsters
+* Unique skillsets and inventories
+* Loot from loot table after death
+
+### Items 
+* Weight value
+* Only temporary effect (consumable)
