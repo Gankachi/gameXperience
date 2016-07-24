@@ -28,14 +28,14 @@ As for this version 1.0, the following functionnalities are to be programmed:
 * Possibility of stat tests and variable difficulty on actions
 
 ### Characters
-* Character inventory (weight system based on **CON**)
-* Character armor (weight halved in inventory)
+* Character inventory
+* Character armor
 * Character main weapon
 * Leveling XP Curve
 * Character classes with spells accessible at certain levels
 * Spells (with limited use)
 * Team management up to 4 players
-* Health and Magic meters
+* Health 
 * Main RPG stats
 
 ### Monsters
@@ -45,5 +45,4 @@ As for this version 1.0, the following functionnalities are to be programmed:
 * Loot from loot table after death
 
 ### Items 
-* Weight value
-* Only temporary effect (consumable)
+* Only consumable or gear
